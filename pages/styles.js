@@ -1,0 +1,87 @@
+import {StyleSheet} from 'react-native';
+
+
+const styles = StyleSheet.create({
+    header:{
+        backgroundColor:'#232323',
+        top:24,
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:"flex-end",
+        padding:20,
+        height:60   
+    },
+    container:{
+        flex:1,
+        backgroundColor:'#FFFFFF'
+    },
+    chekbox:{
+       margin: 16, 
+       border:1,
+    },
+    body:{
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-between',
+        padding:8,
+        borderBottomWidth:1,
+        borderBottomColor:"#F5F5F5",
+    },
+    search:{
+        padding:8,
+        marginTop:35,
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'center',
+        backgroundColor:'#FFFFFF'
+    },
+    textInput:{
+        borderWidth:1,
+        height:50,
+        borderColor:"#E8E8E8",
+        padding:10,
+        width:'80%',
+        textAlign:"center"
+    },
+    searchButton:{
+        height:50,
+        backgroundColor:'#336CFF',
+        width:"20%",
+        padding:10,
+        borderWidth:1,
+        borderColor:'#336CFF',
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    avatar:{
+        width:60,
+        height:60,
+        borderRadius:100
+    },
+    userInfo:{
+        flexDirection:'row',
+        alignItems:'center'
+    },
+    username:{
+        fontSize:18,
+        fontWeight:"semibold",
+        marginLeft:10
+    },
+    number:{
+        fontSize:14,
+        marginLeft:10,
+        color:"gray"
+    },
+    button:{
+        marginTop:8,
+        alignSelf:'center',
+        alignItems:'center',
+        justifyContent:'center',
+        width:'90%',
+        backgroundColor:'#020202',
+        borderRadius:3,
+        color:'white',
+        padding:14,
+    }
+});
+export default styles;
