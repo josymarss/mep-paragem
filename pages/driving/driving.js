@@ -4,7 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import Ionicons from '@expo/vector-icons/FontAwesome5';
 
-import SendMessage from '../utils/sendmessages';
+import SendMessage from '../../utils/sendmessages';
 
 export default function Drivig({ navigation,route }){
     const { updatedWorkers } = route.params;

@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
-import { StyleSheet, Text, View,TextInput,Image, ScrollView, Button, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View,TextInput, ScrollView, TouchableOpacity,Image, } from 'react-native';
 import Checkbox from 'expo-checkbox';
 import Ionicons from '@expo/vector-icons/FontAwesome5';
 import data from '../utils/usersdata';
 
 import styles from './styles';
+import stylesCard from '../components/usercard/styles';
+// import Card from '../components/usercard/usercard';
 
 export default function Main({ navigation }){
 
@@ -17,6 +19,7 @@ export default function Main({ navigation }){
 
     const [value, onChangeSearch] = useState();
     const [workers, setWorkers] = useState(data);
+    
     const [controlCheck, setControlCheck] = useState();
     
     const [message, setMessageState] = useState(false);
@@ -51,25 +54,25 @@ export default function Main({ navigation }){
         //update workers
         //send to driving 
     }
-
     function Card({name, avatar, phoneNumber, state,id}) {
+    
         
         return(
-            <View style={styles.body}>
-                <View style={styles.userInfo}>
-                    <Image style={styles.avatar} source={avatar}/>
+            <View style={stylesCard.body}>
+                <View style={stylesCard.userInfo}>
+                    <Image style={stylesCard.avatar} source={avatar}/>
                     <View>
-                        <Text style={styles.username}>{name}</Text>
-                        <Text style={styles.number}>{phoneNumber}</Text>
+                        <Text style={stylesCard.username}>{name}</Text>
+                        <Text style={stylesCard.number}>{phoneNumber}</Text>
                     </View>
                 </View>
                 <TouchableOpacity>
-                    <Checkbox style={styles.checkbox} value={state} onValueChange={() => { setChecked(id) } } />
+                    <Checkbox style={stylesCard.checkbox} value={state} onValueChange={() => { setChecked(id) } } />
                 </TouchableOpacity>
             </View>
         );
     }
-
+    
     function RenderWorkers(){
         return(
             <View style={styles.container}>
@@ -78,7 +81,7 @@ export default function Main({ navigation }){
                     <Ionicons 
                         name="map-marker-alt" size={20} 
                         color="white" style={{marginRight:28}} 
-                        onPress={navigation.navigate('Routes')}
+                        onPress={() => navigation.navigate('Routes')}
                     />
                 </TouchableOpacity>
                 <TouchableOpacity>
@@ -99,6 +102,7 @@ export default function Main({ navigation }){
                     </View>
             </View>
             {message ? <Text style={{ color:'tomato', textAlign:'center' }}> Nenhuma usuário encontrado!</Text> :''}
+            <Text style={styles.title}>Funcionários</Text>
             <ScrollView style={{marginBottom:8, backgroundColor:'#FFFFFF'}}>
                 {workers.map((user,index) => 
                     <Card key={index} 
@@ -120,10 +124,6 @@ export default function Main({ navigation }){
         </View>
         );
     }
-
-    
-
-
     return(
         <RenderWorkers />
     );

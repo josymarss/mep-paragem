@@ -15,18 +15,7 @@ const styles = StyleSheet.create({
         flex:1,
         backgroundColor:'#FFFFFF'
     },
-    chekbox:{
-       margin: 16, 
-       border:1,
-    },
-    body:{
-        flexDirection:'row',
-        alignItems:'center',
-        justifyContent:'space-between',
-        padding:8,
-        borderBottomWidth:1,
-        borderBottomColor:"#F5F5F5",
-    },
+    
     search:{
         padding:8,
         marginTop:35,
@@ -53,25 +42,8 @@ const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent:'center'
     },
-    avatar:{
-        width:60,
-        height:60,
-        borderRadius:100
-    },
-    userInfo:{
-        flexDirection:'row',
-        alignItems:'center'
-    },
-    username:{
-        fontSize:18,
-        fontWeight:"semibold",
-        marginLeft:10
-    },
-    number:{
-        fontSize:14,
-        marginLeft:10,
-        color:"gray"
-    },
+    
+   
     button:{
         marginTop:8,
         alignSelf:'center',
@@ -82,6 +54,12 @@ const styles = StyleSheet.create({
         borderRadius:3,
         color:'white',
         padding:14,
+    },
+    title:{
+        fontWeight:'bold',
+        fontSize:18,
+        marginLeft:8,
+        padding:10
     }
 });
 export default styles;

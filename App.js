@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Main from './pages/main';
-import Driving from './pages/driving';
+import Driving from './pages/driving/driving';
 import Routes from './pages/routes/routes';
 
 const Stack = createNativeStackNavigator();
